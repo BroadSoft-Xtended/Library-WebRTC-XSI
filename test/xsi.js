@@ -33,5 +33,9 @@ describe('xsi', function() {
     it('userDirectoryEnterprise with not matching search params', function() {
       return client.userDirectoryEnterprise({emailAddress: 'notexisting@test.com'}).should.eventually.have.property('totalAvailableRecords').equal('0');
     });
+
+    it('userAccessDevices', function() {
+      return client.userAccessDevices().should.eventually.have.length.above('0');
+    });
   })
 });

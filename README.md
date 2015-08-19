@@ -11,6 +11,7 @@ Property                 |Type     |Default                                     
 -------------------------|---------|---------------------------------------------------------------------|------------------------------------------------------------
 enabled                  |boolean  |true                                                                 |True if XSI is enabled
 domain        			|string  |broadsoftlabs.com 								                   |Domain for the XSI requests
+port 					|number  |443																	|Port of the XSP hosts to connect to.
 xspHosts        		|array  |['xsp1.broadsoftlabs.com', 'xsp2.broadsoftlabs.com']                    |URLs of the XSP hosts
 
 
@@ -19,4 +20,6 @@ xspHosts        		|array  |['xsp1.broadsoftlabs.com', 'xsp2.broadsoftlabs.com'] 
 
 Method   |Parameters  |Description
 ---------|------------|-----------------------------
-request(xsiUser, xsiPassword)  | xsiUser : string, xsiPassword : string            |Sends a XSI actions request. 
+connect(user, password)  | user : string, password : string            |Returns a client to trigger the XSI actions requests on. 
+userDirectoryEnterprise(params)  | params : object            |Gets the user's enterprise directory and can be filtered through the URL parameters as search criterias. 
+userAccessDevices(params)  | params : object            |Gets the user's access devices. 
