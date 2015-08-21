@@ -12,7 +12,15 @@ Property                 |Type     |Default                                     
 enabled                  |boolean  |true                                                                 |True if XSI is enabled
 domain        			|string  |broadsoftlabs.com 								                   |Domain for the XSI requests
 port 					|number  |443																	|Port of the XSP hosts to connect to.
-xspHosts        		|array  |['xsp1.broadsoftlabs.com', 'xsp2.broadsoftlabs.com']                    |URLs of the XSP hosts
+protocol				|string  |https																	|Protocol of the XSP hosts to connect to.
+xspHosts        		|array  |['xsp1.broadsoftlabs.com', 'xsp2.broadsoftlabs.com']                    |URLs of the XSP hosts pool
+
+#### Properties
+<a name="properties"></a>
+
+Property      |Type    |Description
+--------------|--------|---------------------------------------------------------------------------------
+xspUrl 	  |string |Url of the xsp to connect to.
 
 
 ## Method
