@@ -37,5 +37,9 @@ describe('xsi', function() {
     it('userAccessDevices', function() {
       return client.userAccessDevices().should.eventually.have.length.above('0');
     });
+
+    it('userProfile', function() {
+      return client.userProfile().should.eventually.have.deep.property('details.userId', config.user+'@'+xsi.domain);
+    });
   })
 });
