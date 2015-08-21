@@ -16,6 +16,17 @@ describe('xsi', function() {
     } catch(e) {}
   });
 
+  describe('connect with wrong credentials', function(){
+    before(function(){
+      xsi.enabled = true;
+      client = xsi.connect(config.user, 'wrongpassword');
+    });
+
+    it('userProfile', function() {
+      return client.userProfile().should.eventually.be.rejected;
+    });
+  });
+
   describe('connect', function(){
     before(function(){
       xsi.enabled = true;
