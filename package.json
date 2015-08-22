@@ -7,9 +7,12 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
+    "domino": "^1.0.19",
     "jquery": "2.1.4",
+    "jsdom": "^3.1.2",
     "q": "1.4.1",
-    "xml2js": "0.4.9"
+    "xml2js": "0.4.9",
+    "xmlhttprequest": "^1.7.0"
   },
   "devDependencies": {
     "webrtc-core": "BroadSoft-Xtended/Library-WebRTC-Core.git",
