@@ -1,4 +1,4 @@
-var test = require('../node_modules/webrtc-core/test/includes/common');
+var test = require('../node_modules/webrtc-core/test/includes/common_core');
 var extend = require('extend');
 var chai = require("chai");
 chai.use(require("chai-as-promised"));
@@ -10,6 +10,7 @@ describe('xsi', function() {
     test.createModelAndView('xsi', {
         xsi: require('../')
     });
+    global.window = undefined;
     config = require('./config/default.json');
     try {
       extend(config, require('./config/test.json'));
@@ -50,6 +51,10 @@ describe('xsi', function() {
     });
 
     it('userProfile', function() {
+      return client.userProfile().should.eventually.have.deep.property('details.userId', config.user+'@'+xsi.domain);
+    });
+    it('userProfile with DNS url', function() {
+      xsi.xspUrl = 'https://xsp.broadsoftlabs.com';
       return client.userProfile().should.eventually.have.deep.property('details.userId', config.user+'@'+xsi.domain);
     });
   })
