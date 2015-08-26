@@ -8,10 +8,10 @@
   },
   "dependencies": {
     "q": "1.4.1",
-    "webrtc-core": "BroadSoft-Xtended/Library-WebRTC-Request.git",
     "xml2js": "0.4.9"
   },
   "devDependencies": {
+    "webrtc-request": "BroadSoft-Xtended/Library-WebRTC-Request.git",
     "webrtc-core": "BroadSoft-Xtended/Library-WebRTC-Core.git",
     "templatizer": "1.2.1",
     "mocha": "2.1.0",
