@@ -8,7 +8,8 @@ describe('xsi', function() {
 
   before(function() {
     test.createModelAndView('xsi', {
-        xsi: require('../')
+        xsi: require('../'),
+        request: require('webrtc-request')
     });
     global.window = undefined;
     config = require('./config/default.json');
